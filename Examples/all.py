@@ -10,15 +10,15 @@ from time import sleep
 piglow = PiGlow()
 
 while True:
-    count = range(0, 256, +1)
+    count = list(range(0, 256, +1))
     for item in count:
         if item < 256:
             piglow.all(item)
             sleep(0.01)
         if item == 256:
             break
-    count = range(255, 0, -1)
-    print "Brightest"
+    count = list(range(255, 0, -1))
+    print("Brightest")
     for item in count:
         if item > 0:
             piglow.all(item)
@@ -26,5 +26,5 @@ while True:
         if item == 0:
             piglow.all(0)
             break
-    print "Fin"
+    print("Fin")
     break

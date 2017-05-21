@@ -8,23 +8,23 @@ from piglow import PiGlow
 
 piglow = PiGlow()
 
-val = input("White: ")
+val = eval(input("White: "))
 piglow.white(val)
 
-val = input("Blue: ")
+val = eval(input("Blue: "))
 piglow.blue(val)
 
-val = input("Green: ")
+val = eval(input("Green: "))
 piglow.green(val)
 
-val = input("Yellow: ")
+val = eval(input("Yellow: "))
 piglow.yellow(val)
 
-val = input("Orange: ")
+val = eval(input("Orange: "))
 piglow.orange(val)
 
-val = input("Red: ")
+val = eval(input("Red: "))
 piglow.red(val)
 
-val = input("All: ")
+val = eval(input("All: "))
 piglow.all(val)

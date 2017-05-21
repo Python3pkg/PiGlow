@@ -27,7 +27,7 @@ class PiGlow:
         elif rpi.RPI_REVISION == 3:
             i2c_bus = 1
         else:
-            print "Unable to determine Raspberry Pi revision."
+            print("Unable to determine Raspberry Pi revision.")
             exit
 
         self.bus = SMBus(i2c_bus)
@@ -104,7 +104,7 @@ class PiGlow:
             self.bus.write_byte_data(0x54, 0x0D, value)
             self.bus.write_byte_data(0x54, 0x16, 0xFF)
         else:
-            print "Unknown number, expected only 1, 2 or 3"
+            print("Unknown number, expected only 1, 2 or 3")
 
     def arm1(self, value):
         self.bus.write_byte_data(0x54, 0x07, value)
@@ -169,7 +169,7 @@ class PiGlow:
             self.bus.write_byte_data(0x54, 0x12, value)
             self.bus.write_byte_data(0x54, 0x16, 0xFF)
         else:
-            print "Only colours 1 - 6 or color names are allowed"
+            print("Only colours 1 - 6 or color names are allowed")
 
     def led(self, led, value):
         leds = [
